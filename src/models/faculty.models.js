@@ -10,26 +10,16 @@ const facultySchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    section: [{
-        type: mongoose.Schema.Types.ObjectId,
-        rel: "Section",
-    }],
-    course: [{
-        type: mongoose.Schema.Types.ObjectId,
-        rel: "Course",
-    }],
     email: {
         type: String,
         required: true,
     },
-    phoneNo: {
-        type: String,
-        required: true,
-    },
-    dob: {
-        type: String,
-        required: true,
-    }
+    classroomCode: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            rel: "Classroom",
+        }
+    ]
 
 }, {timestamps: true});
 

@@ -22,20 +22,10 @@ const studentSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    phoneNo:{
-        type: String,
-        required: true,
-    },
-    dob: {
-        type: String,
-        required: true,
-    },
-    facultyName: {
-        type: [{
-            type: mongoose.Schema.Types.ObjectId,
-            rel: "Faculty",
-        }]
-    },
+    classroomCode:[{
+        type: mongoose.Schema.Types.ObjectId,
+        rel: "Classroom",
+    }],
 
 }, {timestamps: true});
 
